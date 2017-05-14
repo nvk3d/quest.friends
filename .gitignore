@@ -2,4 +2,4 @@
 .idea
 
 vendor/
-config/*local.*
+config/*local.php
