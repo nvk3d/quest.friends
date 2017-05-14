@@ -43,9 +43,9 @@ class m170514_123545_init extends Migration
             'date_created' => $this->timestamp()->null()
         ]);
 
-        $this->createTable('log_page', [
+        $this->createTable('log_url', [
             'id' => $this->primaryKey(11),
-            'value' => 'VARCHAR(100)'
+            'value' => 'VARCHAR(500)'
         ]);
 
         $this->createTable('log_oper', [
@@ -54,7 +54,8 @@ class m170514_123545_init extends Migration
         ]);
 
         $this->createTable('log_ua', [
-            'id' => $this->primaryKey(11)
+            'id' => $this->primaryKey(11),
+            'value' => 'VARCHAR(1000)'
         ]);
     }
 

@@ -10,14 +10,14 @@ use Yii;
  * @property int $id
  * @property string $value
  */
-class LogPage extends \yii\db\ActiveRecord
+class LogUrl extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'log_page';
+        return 'log_url';
     }
 
     /**
@@ -39,5 +39,19 @@ class LogPage extends \yii\db\ActiveRecord
             'id' => 'ID',
             'value' => 'Value',
         ];
+    }
+
+    public static function getPageId($value) {
+        $logPage = LogUrl::findOne(['value' => $value]);
+        if ($logPage) {
+            return $logPage->id;
+        }
+
+        $logPage = new LogUrl(['value' => $value]);
+        if ($logPage->save()) {
+            return $logPage->id;
+        }
+
+        return $logPage->getErrors();
     }
 }

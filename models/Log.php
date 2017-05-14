@@ -53,16 +53,17 @@ class Log extends \yii\db\ActiveRecord
 
     public static function add($action) {
         $operId = LogOper::getOperId($action->id);
-        $uaId = LogUa::getUaId($action->id);
+        $uaId = LogUa::getUaId(Yii::$app->request->userAgent);
+        $pageId = LogUrl::getPageId(Yii::$app->request->url);
         $log = new Log([
             'ip' => Yii::$app->request->userIP,
-            'page' => Yii::$app->request->url,
+            'page' => $pageId,
             'oper' => $operId,
             'ua' => $uaId,
             'date_created' => date("Y-m-d H:i:s"),
         ]);
         if ($log->save()) {
-            return true;
+            return $log;
         }
         return $log->getErrors();
     }
