@@ -14,6 +14,6 @@ namespace app\modules\main\controllers;
 class IndexController extends ParentController
 {
     public function actionIndex() {
-        return ['success' => 1];
+        return $this->render('@app/web/src/index');
     }
 }
