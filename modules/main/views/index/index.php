@@ -1,14 +1,21 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: nvk3d
- * Date: 14.05.17
- * Time: 18:27
+ * Created by nvk3d
+ * 14.05.2017
+ *
+ * @var $this yii\web\View
  */
-/* @var $this yii\web\View */
-
 ?>
-<div id="page-wrapper">
+<?/*<!DOCTYPE HTML>
+    <html>
+    <head>
+        <title>Helios by HTML5 UP</title>
+        <meta charset="<?= Yii::$app->charset ?>" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <? $this->registerCss("@app/web/src/assets/css/main.css") ?>
+    </head>
+    <body class="homepage">
+        <div id="page-wrapper">
 
     <!-- Header -->
     <div id="header">
@@ -367,14 +374,15 @@
     </div>
 
 </div>
-<?
-    // Scripts
-    $this->registerJs("assets/js/jquery.min.js");
-    $this->registerJs("assets/js/jquery.dropotron.min.js");
-    $this->registerJs("assets/js/jquery.scrolly.min.js");
-    $this->registerJs("assets/js/jquery.onvisible.min.js");
-    $this->registerJs("assets/js/skel.min.js");
-    $this->registerJs("assets/js/util.js");
-    $this->registerJs("assets/js/main.js");
+<?php
+    $this->registerJs("@app/web/src/assets/js/jquery.min.js");
+    $this->registerJs("@app/web/src/assets/js/jquery.dropotron.min.js");
+    $this->registerJs("@app/web/src/assets/js/jquery.scrolly.min.js");
+    $this->registerJs("@app/web/src/assets/js/jquery.onvisible.min.js");
+    $this->registerJs("@app/web/src/assets/js/skel.min.js");
+    $this->registerJs("@app/web/src/assets/js/util.js");
+    $this->registerJs("@app/web/src/assets/js/main.js");
 ?>
-
+    </body>
+</html>
+*/?>

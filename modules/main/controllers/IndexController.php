@@ -10,10 +10,10 @@ namespace app\modules\main\controllers;
 
 
 
-
 class IndexController extends ParentController
 {
     public function actionIndex() {
-        return $this->render('@app/web/src/index');
+        $this->layout = 'index';
+        return $this->render('index');
     }
 }
