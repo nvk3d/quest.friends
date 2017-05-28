@@ -13,7 +13,6 @@ namespace app\modules\main\controllers;
 class IndexController extends ParentController
 {
     public function actionIndex() {
-        $this->layout = 'index';
         return $this->render('index');
     }
 }
